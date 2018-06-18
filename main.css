@@ -1,0 +1,68 @@
+body {
+    background-color: #f9f2db;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Fredoka One', cursive;
+}
+
+p, .el-menu-item, .el-switch__label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.el-switch__label, .el-switch .is-active {
+    color: #f9f2db;
+}
+
+.el-switch .is-active {
+    font-weight: bold;
+}
+
+.el-carousel__item img {
+    height: 100%;
+    margin: auto;
+    display: block;
+}
+
+.el-col h1 {
+    text-align: center;
+    cursor: pointer;
+}
+
+.el-col iframe {
+    margin: auto;
+    display: block;
+}
+
+#homeBtn {
+    display: inline-block;
+}
+
+#homeBtn a, #homeBtn a:visited, #homeBtn a:active, #homeBtn a:link {
+    text-decoration: none;
+    color: #f9f2db;
+}
+
+.lang {
+    float: right;
+}
+
+header, footer {
+    background-color: #d8460b;
+    color: #f9f2db;
+    padding: 3%;
+}
+
+footer {
+    font-size: small;
+    text-align: center;
+    margin-top: 3%
+}
+
+footer a, footer a:hover, footer a:visited {
+    color: #f9f2db;
+} 
+
+.el-carousel__arrow:hover {
+    background-color: rgba(0, 114, 145, 1)
+}
