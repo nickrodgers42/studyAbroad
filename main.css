@@ -28,6 +28,9 @@ p, .el-menu-item, .el-switch__label {
     text-align: center;
     cursor: pointer;
 }
+.el-col h1:hover {
+    color: #d8460b;
+}
 
 .el-col iframe {
     margin: auto;

@@ -18,7 +18,7 @@
                     active-text="Español" inactive-value="english" active-value="spanish">
                 </el-switch>
             </div>
-            <div class="linkHeader">
+            <div id="homeBtn">
                 <a href="">
                     <h1 v-if="lang == 'english'">My Time in Logroño</h1>
                     <h1 v-else>Mi Tiempo en Logroño</h1>
@@ -47,7 +47,7 @@
                 <el-menu-item index="video">Vídeo</el-menu-item>
             </template>
         </el-menu>
-
+        
         <footer>
             <p v-if="lang == 'english'">This website was designed and written by Nicholas Rodgers using
                 <a href="https://vuejs.org/">Vue</a> and
@@ -69,7 +69,7 @@
     var vm = new Vue({
         el: "#page",
         data: {
-            activeIndex: 'video',
+            activeIndex: 'index',
             lang: "english"
         },
         methods: {
