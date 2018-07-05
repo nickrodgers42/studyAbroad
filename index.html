@@ -1,7 +1,7 @@
 <!Doctype <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi tiempo en Logroño</title>
+    <title>Mi tiempo en España</title>
     <meta charset="utf-8">
     <!-- import CSS -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
@@ -27,12 +27,12 @@
             </div>
             <div id="homeBtn">
                 <a href="">
-                    <h1 v-if="lang == 'english'">My Time in Logroño</h1>
-                    <h1 v-else>Mi Tiempo en Logroño</h1>
+                    <h1 v-if="lang == 'english'">My Time in España</h1>
+                    <h1 v-else>Mi Tiempo en España</h1>
                 </a>
             </div>
-            <p v-if="lang == 'english'">Some of my favorite experiences from studying abroad in Logroño, Spain, and some of what I learned while there.</p>
-            <p v-else>Algunas de mis experiencias favoritas de estudiar en el extranjero en Logroño, España, y un poco de lo que aprendí allí.</p>
+            <p v-if="lang == 'english'">Some of my favorite experiences from studying abroad in Spain, and some of what I learned while there.</p>
+            <p v-else>Algunas de mis experiencias favoritas de estudiar en el extranjero en España, y un poco de lo que aprendí allí.</p>
         </header>
         <el-menu 
             :default-active="activeIndex" 
@@ -50,20 +50,22 @@
                 <el-menu-item index="food">Food</el-menu-item>
                 <el-menu-item index="adventure">Adventure</el-menu-item>
                 <el-menu-item index="video">Video</el-menu-item>
+                <el-menu-item index="more">More</el-menu-item>
             </template>
             <template v-else>
                 <el-menu-item index="index">Inicio</el-menu-item>
-                <el-menu-item index="people">Personas</el-menu-item>
-                <el-menu-item index="places">Lugares</el-menu-item>
-                <el-menu-item index="food">Comida</el-menu-item>
-                <el-menu-item index="adventure">Aventura</el-menu-item>
-                <el-menu-item index="video">Vídeo</el-menu-item>                
+                <el-menu-item index="people">Las Personas</el-menu-item>
+                <el-menu-item index="places">Los Lugares</el-menu-item>
+                <el-menu-item index="food">La Comida</el-menu-item>
+                <el-menu-item index="adventure">La Aventura</el-menu-item>
+                <el-menu-item index="video">Mi Vídeo</el-menu-item>       
+                <el-menu-item index="more">Más</el-menu-item>
             </template>
         </el-menu>
         <el-row>
             <el-col :span="12">
                 <h1 v-if="lang == 'english'" v-on:click="goToPage('people')">People</h1>
-                <h1 v-else v-on:click="goToPage('people')">Personas</h1>
+                <h1 v-else v-on:click="goToPage('people')">Las Personas</h1>
                 <el-carousel indicator-position="outside">
                     <el-carousel-item>
                         <img src="images/people/person1.jpg">
@@ -80,71 +82,121 @@
                 </el-carousel>
             </el-col>
             <el-col :span="12">
-                <h1 v-if="lang == 'english'" v-on:click="goToPage('places')">Places</h1>
-                <h1 v-else v-on:click="goToPage('places')">Lugares</h1>
+                <h1 v-if="lang == 'english'" v-on: click="goToPage('places')">Places</h1>
+                <h1 v-else v-on: click="goToPage('places')">Los Lugares</h1>
                 <el-carousel indicator-position="outside">
                     <el-carousel-item>
-                        <img src="images/places/places1.jpg">
+                        <img src="images/places/cascadas.jpg">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/places/places2.jpg">
+                        <img src="images/places/cascadasonly.jpg">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/places/places3.jpg">
+                        <img src="images/places/cascoAntiguo.jpg">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/places/places4.jpg">
+                        <img src="images/places/laRodonda.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/monumentoAAlfonsoXII.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/ojoDeGuarena.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/oliteCastle.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/oliteNavarra.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/paisaje.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/palacioDeCristal.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/palacioReal.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/plazaMayor.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/places/rodondaDrift.jpg">
                     </el-carousel-item>
                 </el-carousel>
             </el-col>
         </el-row>
         <el-row>
             <el-col :span="12">
-                <h1 v-if="lang == 'english'" v-on:click="goToPage('food')">Food</h1>
-                <h1 v-else v-on:click="goToPage('food')">Comida</h1>
+                <h1 v-if="lang == 'english'" v-on: click="goToPage('food')"> Food </h1>
+                <h1 v-else v-on: click="goToPage('food')"> La Comida </h1>
                 <el-carousel indicator-position="outside">
                     <el-carousel-item>
-                        <img src="images/food/food1.jpg">
+                        <img src="images/food/champinones.jpg">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/food/food2.jpg">
+                        <img src="images/food/perasEnVino.jpg">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/food/food3.jpg">
+                        <img src="images/food/tapasStreetArt.jpg">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/food/food4.jpg">
+                        <img src="images/food/tortillas.jpg">
                     </el-carousel-item>
                 </el-carousel>
             </el-col>
             <el-col :span="12">
-                <h1 v-if="lang == 'english'" v-on:click="goToPage('adventure')">Adventure</h1>
-                <h1 v-else v-on:click="goToPage('adventure')">Aventura</h1>
+                <h1 v-if="lang == 'english'" v-on: click="goToPage('adventure')">Adventure</h1>
+                <h1 v-else v-on: click="goToPage('adventure')">La Aventura</h1>
                 <el-carousel indicator-position="outside">
                     <el-carousel-item>
-                        <img src="images/adventure/adventure1.jpg">
+                        <img src="images/adventure/cascadasorbeneja.JPG">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/adventure/adventure2.jpg">
+                        <img src="images/adventure/oliteNickSolo.JPG">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/adventure/adventure3.jpg">
+                        <img src="images/adventure/oliteNickySergio.JPG">
                     </el-carousel-item>
                     <el-carousel-item>
-                        <img src="images/adventure/adventure4.jpg">
+                        <img src="images/adventure/oliteOnTopOfCastle.JPG">
                     </el-carousel-item>
                 </el-carousel>
             </el-col>
         </el-row>
         <el-row>
-            <el-col :span="24">
+            <el-col :span="12">
+                <h1 v-if="lang == 'english'" v-on:click="goToPage('video')">Video</h1>
+                <h1 v-else v-on:click="goToPage('video')">Mi Vídeo</h1>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZIkvEkQ-cHA" frameborder="0" allow="autoplay; encrypted-media"
+                        allowfullscreen></iframe>
+                </div>
+            </el-col>
+            <el-col :span="12">
+                <h1 v-if="lang == 'english'" v-on: click="goToPage('more')">More</h1>
+                <h1 v-else v-on: click="goToPage('more')">Más</h1>
+                <el-carousel indicator-position="outside">
+                    <el-carousel-item>
+                        <img src="images/more/pradoJupiter.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/more/rieteraRoses.jpg">
+                    </el-carousel-item>
+                    <el-carousel-item>
+                        <img src="images/more/rodundaJesus.jpg">
+                    </el-carousel-item>
+                </el-carousel>
+            </el-col>
+            <!-- <el-col :span="24">
                 <h1 v-if="lang == 'english'" v-on:click="goToPage('video')">Video</h1>
                 <h1 v-else v-on:click="goToPage('video')">Vídeo</h1>
                 <div>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZIkvEkQ-cHA" frameborder="0" allow="autoplay; encrypted-media"
                         allowfullscreen></iframe>
                 </div>
-            </el-col>
+            </el-col> -->
         </el-row>
         <footer>
             <p v-if="lang == 'english'">This website was designed and written by Nicholas Rodgers using <a href="https://vuejs.org/">Vue</a> and <a href="http://element.eleme.io/#/en-US">Element-UI</a>
