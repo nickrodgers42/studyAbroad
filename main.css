@@ -11,6 +11,10 @@ p, .el-menu-item, .el-switch__label {
     font-family: 'Montserrat', sans-serif;
 }
 
+p {
+    line-height: 150%;
+}
+
 .el-switch__label, .el-switch .is-active {
     color: #f9f2db;
 }
@@ -66,6 +70,11 @@ footer {
 footer a, footer a:hover, footer a:visited {
     color: #f9f2db;
 } 
+
+main {
+    width: 75%;
+    margin: auto;
+}
 
 .el-carousel__arrow:hover {
     background-color: rgba(0, 114, 145, 1)
