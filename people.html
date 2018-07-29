@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Mi tiempo en Logroño</title>
+    <title>Mi tiempo en España</title>
     <meta charset="utf-8">
     <!-- import CSS -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
@@ -20,12 +20,12 @@
             </div>
             <div id="homeBtn">
                 <a href="">
-                    <h1 v-if="lang == 'english'">My Time in Logroño</h1>
-                    <h1 v-else>Mi Tiempo en Logroño</h1>
+                    <h1 v-if="lang == 'english'">My Time in España</h1>
+                    <h1 v-else>Mi Tiempo en España</h1>
                 </a>
             </div>
-            <p v-if="lang == 'english'">Some of my favorite experiences from studying abroad in Logroño, Spain, and some of what I learned while there.</p>
-            <p v-else>Algunas de mis experiencias favoritas de estudiar en el extranjero en Logroño, España, y un poco de lo que aprendí allí.</p>            
+            <p v-if="lang == 'english'">Some of my favorite experiences from studying abroad in Spain, and some of what I learned while there.</p>
+            <p v-else>Algunas de mis experiencias favoritas de estudiar en el extranjero en España, y un poco de lo que aprendí allí.</p>
         </header>
         <el-menu :default-active="activeIndex" class="navMenu" mode="horizontal" @select="goToPage" background-color="#f2624f" text-color="#f9f2db"
             active-text-color="#f9c13e">
@@ -36,16 +36,20 @@
                 <el-menu-item index="food">Food</el-menu-item>
                 <el-menu-item index="adventure">Adventure</el-menu-item>
                 <el-menu-item index="video">Video</el-menu-item>
+                <el-menu-item index="more">More</el-menu-item>
             </template>
             <template v-else>
                 <el-menu-item index="index">Inicio</el-menu-item>
-                <el-menu-item index="people">Personas</el-menu-item>
-                <el-menu-item index="places">Lugares</el-menu-item>
-                <el-menu-item index="food">Comida</el-menu-item>
-                <el-menu-item index="adventure">Aventura</el-menu-item>
-                <el-menu-item index="video">Vídeo</el-menu-item>
+                <el-menu-item index="people">Las Personas</el-menu-item>
+                <el-menu-item index="places">Los Lugares</el-menu-item>
+                <el-menu-item index="food">La Comida</el-menu-item>
+                <el-menu-item index="adventure">La Aventura</el-menu-item>
+                <el-menu-item index="video">Mi Vídeo</el-menu-item>
+                <el-menu-item index="more">Más</el-menu-item>
             </template>
         </el-menu>
+
+
 
         <footer>
             <p v-if="lang == 'english'">This website was designed and written by Nicholas Rodgers using
