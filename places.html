@@ -47,6 +47,121 @@
             </template>
         </el-menu>
 
+        <main>
+            <h1 v-if="lang == 'english'" v-on:click="goToPage('places')">Places</h1>
+            <h1 v-else v-on:click="goToPage('people')">Los Lugares</h1>
+            <el-carousel type="card" height="300px" indicator-position="outside">
+                <el-carousel-item>
+                    <img src="images/places/barcelonaMuseum.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/cascadas.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/cascadasonly.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/cascoAntiguo.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/Langre.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/laRedondaOutside.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/laRedondaOutsideNight.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/laRodonda.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/laSegradaFamilia.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/monumentoAAlfonsoXII.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/ojoDeGuarena.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/oliteCastle.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/oliteNavarra.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/paisaje.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/palacioDeCristal.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/palacioReal.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/plazaMayor.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/places/puenteDePiedra.jpg">
+                </el-carousel-item>
+            </el-carousel>
+            <div v-if="lang == 'english'">
+                <p>
+                In Spain, I stayed in a city called Logroño, en the autonomous community of La Rioja. It is in northern Spain, 
+                not far from the French border and the sea. This region is famous for wine, and is surrounded by vinyards. The 
+                Camino de Santiago also passes through there, and you can see the shells that mark the path and sometimes a few pilgrims.
+                Also, the city has a good social scene, and there are many bars that serve tapas and pinchos en Calle Laurel, Calle San Juan,
+                and others. The city is know for its co-cathedral, the Co-catedral de Santa Maria de La Redonda, or mor simply, La Redonda.
+                It is in the historic area of Logroño, Casco Antiguo. I think that Logroño is a very fun and interesting place. 
+                </p>
+                <p>
+                 I also stayed in a few other places. The first nights before the program, I stayed in Madrid, and explored the city with a few
+                 friends that I met at my hostel. I liked it a lot because I saw many places that I have learned about in my classes, like
+                 Plaza Mayor, the Royal Palace, and the Museum del Prado. 
+                </p>
+                <p>
+                With my host family, we went to many places. We went to Langre and Santander, some beaches in northern Spain, and I liked them a lot. 
+                We also went to a place called el Ojo de Guareña, which is a system of caves that some monks transformed into a monestary.
+                We went to some waterfalls, and a town right next to the waterfalls, and it is a very beautiful place. Sergio, Raul, and I 
+                went to a pond in the countryside of Spain. I think that the landscape of Spain is very beautiful and very different from 
+                what I have found in the United States. And finally, we also went to a few castles in Olite that were restored from ruinas
+                and it was pretty cool to see them.
+                </p>
+                <p>
+                    With the students from USU, we went to many places around Logroño, like the top of Mount Contabria. We also went to Barcelona for a weekend.
+                    I liked it a lot. We saw a lot of places and I learned a lot about my classmates.
+                </p>
+            </div>
+            <div v-else>
+                <p>
+                En España, me quedaba en una ciudad que se llama Logroño, en la comunidad autónoma de La Rioja. Está en un el norte de España,
+                no muy lejos de la frontera Francesa y el mar. Este region es famoso por el vino y está rodeado por las viñas. También el
+                Camino de Santiago pasa por allí, y puedes ver las conchas que marcan el camino y a veses algunos peregrinos. También, la
+                ciudad tiene mucha marcha y hay muchos barres que sirven las tapas y pinchos en Calle Laurel, Calle San Juan, y otros. La
+                ciudad es conocido por su concatedral, el Concatedral de Santa Maria de la Redonda, o más sencilblimente, La Redonda. Está
+                en el area historico de Logroño, Casco Antiguo. Creo que Logroño es un lugar muy divertido y interesante.
+                </p>
+                <p>                
+                También, me quedaba en algunas otros lugares. Los primeros noches antes de la programa, me quedaba en Madrid, y me exploré
+                ese ciudad con algunos amigos que conocí a mi hostel. Me gustó mucho porque vi muchos lugares sobre que he aprendido en mis
+                clases, como la Plaza Mayor, El Palacio Real, y El Museo del Prado. 
+                </p>
+                <p>
+                Con mi familia anfitrona, fuimos a muchos lugares. Fuimos a Langre y Santander, algunas playas en el norte de España, y me gustaron mucho. 
+                Tambien fuimos a un lugar que se llama el Ojo de Guareña, que es una sistema de cuevas que algunos monjes transformaban en un monestario. Fuimos a algunas cascadas 
+                y un pueblo a lado de las cascadas, y es un lugar 
+                muy bella. Sergio, Raul y yo fuimos a un estanque en el campo de españa. Yo creo que el paisaje de españa es muy bella y
+                diferente de lo que he encontrado en los estados unidos. Y finalmente fuimos también a algunos castillos en Olite que estaban
+                restorados de ruinas y fue muy guay verlos.
+                </p>
+                <p>
+                Con los estudiantes de USU, fuimos a muchos lugares en y alredador de Logroño, como el encima de Monte Contabria. También fuimos a Barcelona para un fin de la semana.
+                Lo me gustó mucho. Vimos muchos lugares y aprendí mucho sobre mis compañeros. 
+                </p>
+            </div>
+        </main>
+
         <footer>
             <p v-if="lang == 'english'">This website was designed and written by Nicholas Rodgers using
                 <a href="https://vuejs.org/">Vue</a> and

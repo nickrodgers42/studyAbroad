@@ -7,11 +7,11 @@ if __name__ == "__main__":
     \n    <h1 v-else v-on:click = "goToPage(\'' + goTo + '\')">Las Personas</h1 > \
     \n    <el-carousel indicator-position = "outside" >')
 
-    photoDir = "originalImages/people/"
+    photoDir = "images/people/"
     for i in os.listdir(photoDir):
         # print(i)
         print('        <el-carousel-item> \
-        \n            <img src = "' + photoDir + i + '" > \
+        \n            <img src = "' + photoDir + i + '"> \
         \n        </el-carousel-item>')
-    print('     </el-carousel > \
+    print('     </el-carousel> \
         \n</el-col>')

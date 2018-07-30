@@ -58,65 +58,75 @@
                 indicator-position="outside"
             >
                 <el-carousel-item>
-                    <img src="originalImages/people/cascadasorbeneja.JPG">
+                    <img src="images/people/cascadasorbeneja.JPG">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/christieSea.jpg">
+                    <img src="images/people/christieSea.jpg">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/claseDeGastronomia.jpg">
+                    <img src="images/people/claseDeGastronomia.jpg">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/claseDeLinguaje.jpeg">
+                    <img src="images/people/claseDeLinguaje.jpeg">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/comidaDespedida.jpeg">
+                    <img src="images/people/comidaDespedida.jpeg">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/karaoke.jpeg">
+                    <img src="images/people/karaoke.jpeg">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/monteCantabriaHike.jpg">
+                    <img src="images/people/monteCantabriaHike.jpg">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/ojodeGuarenaHats.JPG">
+                    <img src="images/people/ojodeGuarenaHats.JPG">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/SamLelaAndOthers.jpeg">
+                    <img src="images/people/SamLelaAndOthers.jpeg">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/skylerSmokin.jpeg">
+                    <img src="images/people/sergioYraul.JPG">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/tapasJuntos.jpg">
+                    <img src="images/people/skylerSmokin.jpeg">
                 </el-carousel-item>
                 <el-carousel-item>
-                    <img src="originalImages/people/usuClass.jpg">
+                    <img src="images/people/tapasJuntos.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/people/usuClass.jpg">
                 </el-carousel-item>
             </el-carousel>
-            <p v-if="lang == 'english'">
-                While I was in Spain, I met a lot of people. I stayed with a host family and I liked them a lot. There are four people in my host family:
-                Mayte and Chuchi, the mother and the father, and Sergio and Raul, the two kids. They are very nice and they included me in their day to day
-                activities, as well as their excursions. Also, I spent some time with Mayte and Chuchi's friends, and Sergio's friends. I got a lot of practice
-                speaking with Spaniards in this way. 
-                <br>
-                Another group of people that I met during this experience were my classmates, the students of Utah State University. I have had a couple classes 
-                with some of them at USU, but I never talked to them much outside of the classroom. I think that this experience offered me an opportunity to get to 
-                know them better, and meet those that I have not had class with. I feel like after this experience, I know them all much better. We did a lot of activities
-                outside of class, including a trip to Barcelona and a hike to the top of Mount Cantabria.  
-            </p>
-            <p v-else>
+            <div v-if="lang == 'english'">
+                <p>
+                    While I was in Spain, I met a lot of people. I stayed with a host family and I liked them a lot. There are four people in my host family:
+                    Mayte and Chuchi, the mother and the father, and Sergio and Raul, the two kids. They are very nice and they included me in their day to day
+                    activities, as well as their excursions. Also, I spent some time with Mayte and Chuchi's friends, and Sergio's friends. I got a lot of practice
+                    speaking with Spaniards in this way. 
+                </p>
+                <p></p>
+                    Another group of people that I met during this experience were my classmates, the students of Utah State University. I have had a couple classes 
+                    with some of them at USU, but I never talked to them much outside of the classroom. I think that this experience offered me an opportunity to get to 
+                    know them better, and meet those that I have not had class with. I feel like after this experience, I know them all much better. We did a lot of activities
+                    outside of class, including a trip to Barcelona, a hike to the top of Mount Cantabria, and Karaoke nights.  
+                </p>
+
+            </div>
+            <div v-else>
+                <p>
                  Mientras estaba en España, conocí a mucha gente. Me quedaba con una familia anfitriona y me caen bien. Hay cuatro miembros
                 de mi familia anfitriona: Mayte y Chuchi, la madre y el padre, y Sergio y Raul, los dos chicos. Ellos son muy simpaticos
                 y me incluydaban en sus activididades cotidianas, y también sus excursiones. También, pasé un rato con los amigos de Mayte y Chuchi, y también los amigos
                 de Sergio. Tenía mucha practica hablando con muchos españolas por este manera.
-                <br>
+                </p>
+                <p>
                  Un otro grupo de personas que conocí durante de este experiencia fueron mis compañeros de mis clases, los estudiantes de Utah State University.
                 Ha tenido algunas clases con algunas de ellos a USU, pero nunca hablé con ellos mucho fuera de la salon de clase. Creo que este experiencia
                 me ofrezcó una oportunidad para conocer a ellos mejor, y conocer a los con quien no he tenido clases. Siento como después
-                de este experiencia me conocía a ellos mucho mejor. Hicimos muchos actividades fuera de clase, incluyendo un viaje a Barcelona y una caminata a la encima de 
-                Monte Cantabria.
-            </p>
+                de este experiencia me conocía a ellos mucho mejor. Hicimos muchos actividades fuera de clase, incluyendo un viaje a Barcelona, una caminata a la encima de 
+                Monte Cantabria, y noches de karaoke.
+                </p>
+            </div>
         </main>
 
         <footer>
