@@ -46,19 +46,93 @@
                 <el-menu-item index="video">Vídeo</el-menu-item>
             </template>
         </el-menu>
-
-        <footer>
-            <p v-if="lang == 'english'">This website was designed and written by Nicholas Rodgers using
-                <a href="https://vuejs.org/">Vue</a> and
-                <a href="http://element.eleme.io/#/en-US">Element-UI</a>
-                <br>Photos (Not including stock photos) and videos &copy; Nicholas Rodgers 2018
-            </p>
-            <p v-else>Está página web fue diseñado y escrito por Nicholas Rodgers utilizando
-                <a href="https://vuejs.org/">Vue</a> y
-                <a href="http://element.eleme.io/#/en-US">Element-UI</a>
-                <br>Las fotos (a menos de las fotos de archivos) y los vídeos &copy; Nicholas Rodgers 2018
-            </p>
-        </footer>
+        <main>
+            <h1 v-if="lang == 'english'" v-on:click="goToPage('food')">Food</h1>
+            <h1 v-else v-on:click="goToPage('food')">La Comida</h1>
+            <el-carousel type="card" height="300px" indicator-position="outside">
+                <el-carousel-item>
+                    <img src="images/food/barcelonaCafe.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/calamaris.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/champinones.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/champinonesTapa.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/championesSign.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/matrimonios.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/paella.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/patatasBravas.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/perasEnVino.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/tapaNight.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/tapasStreetArt.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/torrijas.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/tortillas.jpg">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/food/zapatillas.jpg">
+                </el-carousel-item>
+            </el-carousel>
+            <div v-if="lang == 'english'">
+                <p>
+                    One of the thing sthat I enjoyed a lot while I was in Spain was the food. My host family cooked me many typical dishes of
+                    La Rioja and Spain, like tortillas, Patatas de la Rioja, and much more. Also, with my family, we went to the bars in Calle
+                    Laurel and Calle San Juan for the pinchos and tapas. These are small small dishes that you stop at a bar to eat with friends
+                    and then go to another bar to get something else. Tipical tapas include Patatas Bravas, los champiñones, la pruschetta, las zapatillas,
+                    y mas.
+                </p>
+                <p>
+                    Additionally, on of my courses at the University was a Gastronomy class, where we learned how to cook and prepare many tipical Spanish foods,
+                    like Paella, Peras en vino, some tapas including croquettas, and more. This course was my favorite. 
+                </p>
+            </div>
+            <div v-else>
+                <p>
+                    Una de las cosas que me disfrutaba mucho mientras estuve en España fue la comida. Mi familia anfitriona me cocinaba muchos
+                    platos tipicos de La Rioja y España, como la tortilla, patatas de la Rioja, y mucho más. También, con mi familia fuimos a
+                    los bares en Calle Laurel y Calle San Juan para los pinchos y tapas. Esos son platos pequeños que te paras en un bar para comer
+                    con sus amigos, y después va a un otro bar para comer otro. Típicas tapas incluyen las Patatas Bravas, los champiñones, la bruschetta, 
+                    las zapatillas, y más.
+                </p>
+                <p>
+                    También, uno de mis cursos de la Universidad fue un clase de Gastronomía, donde aprendimos como cocinar y preparar muchos comidos
+                    típicos de España, como la Paella, Peras en Vino, algunas tapas incluyendo las croquettas, y más. Este curso fue mi favorito. 
+                </p>
+            </div>
+        </main>
+            
+            <footer>
+                <p v-if="lang == 'english'">This website was designed and written by Nicholas Rodgers using
+                    <a href="https://vuejs.org/">Vue</a> and
+                    <a href="http://element.eleme.io/#/en-US">Element-UI</a>
+                    <br>Photos (Not including stock photos) and videos &copy; Nicholas Rodgers 2018
+                </p>
+                <p v-else>Está página web fue diseñado y escrito por Nicholas Rodgers utilizando
+                    <a href="https://vuejs.org/">Vue</a> y
+                    <a href="http://element.eleme.io/#/en-US">Element-UI</a>
+                    <br>Las fotos (a menos de las fotos de archivos) y los vídeos &copy; Nicholas Rodgers 2018
+                </p>
+            </footer>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

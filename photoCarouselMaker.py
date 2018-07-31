@@ -1,13 +1,13 @@
 import os
 
 if __name__ == "__main__":
-    goTo = "people"
+    goTo = "food"
     print('<el-col :span = "12" > \
-    \n    <h1 v-if = "lang == \'english\'" v-on:click = "goToPage(\'' + goTo + '\')" >People</h1 > \
-    \n    <h1 v-else v-on:click = "goToPage(\'' + goTo + '\')">Las Personas</h1 > \
+    \n    <h1 v-if = "lang == \'english\'" v-on:click = "goToPage(\'' + goTo + '\')">Food</h1 > \
+    \n    <h1 v-else v-on:click = "goToPage(\'' + goTo + '\')">La Comida</h1> \
     \n    <el-carousel indicator-position = "outside" >')
 
-    photoDir = "images/people/"
+    photoDir = "images/food/"
     for i in os.listdir(photoDir):
         # print(i)
         print('        <el-carousel-item> \
