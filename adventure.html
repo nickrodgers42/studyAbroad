@@ -36,6 +36,7 @@
                 <el-menu-item index="food">Food</el-menu-item>
                 <el-menu-item index="adventure">Adventure</el-menu-item>
                 <el-menu-item index="video">Video</el-menu-item>
+                <el-menu-item index="more">More</el-menu-item>
             </template>
             <template v-else>
                 <el-menu-item index="index">Inicio</el-menu-item>
@@ -44,9 +45,69 @@
                 <el-menu-item index="food">Comida</el-menu-item>
                 <el-menu-item index="adventure">Aventura</el-menu-item>
                 <el-menu-item index="video">Vídeo</el-menu-item>
+                <el-menu-item index="more">Más</el-menu-item>
             </template>
         </el-menu>
-
+        <main>
+            <h1 v-if="lang == 'english'" v-on:click="goToPage('adventure')">Adventure</h1>
+            <h1 v-else v-on:click="goToPage('adventure')">La Aventura</h1>
+            <el-carousel type="card" height="300px" indicator-position="outside">
+                <el-carousel-item>
+                    <img src="images/adventure/cascadasorbeneja.JPG">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/adventure/oliteNickSolo.JPG">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/adventure/oliteNickySergio.JPG">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="images/adventure/oliteOnTopOfCastle.JPG">
+                </el-carousel-item>
+            </el-carousel>
+            <div v-if="lang == 'english'">
+                <p>
+                    I feel like every day I was in Spain, there was an adventure of some form. My trip to Logroño was definiately an adventure.
+                    I stayed in a hostel in madrid for two nights before going to Logroño, and there I met a guy from Texas and a girl from Sweden.
+                    Together we explored the city. We saw the Prado Museum, Plaza Mayor, Plaza del sol, and the Parque de Retiro. It definately was a 
+                    unique experience to spend time in a new city, in a different conuntry, and with strangers, but I enjoyed it.
+                </p>
+                <p>
+                    I experienced many adventures with my host family as well. My first day in Logroño, I went with Sergio and his friends to an event
+                    where some people were drifting cars around a roundabout. Later I ate dinner with Sergio and his friends. The next day I went with
+                    my host parents and their friends to some waterfalls and caves in the north and they were very beautiful. One weekend, we went to 
+                    a castle in Olite, the Palace of the Kings of Navarra, and it was a very interesting place. Another weekend, we went to a beach called
+                    Langre, and spent two days there, and it was very beautiful and warm. All of these, do not include the daily adventures that I experienced 
+                    living and spending time with my family in Logroño.
+                </p>
+                <p>
+                    Finally, with my classmates from Utah State, we went on many adventures as well. We hiked Monte Cantabre, we traveled to Barcelona, 
+                    we played frisbee and soccer in the park, we went shopping, and we went sang karaoke. I got to know my classmates very well during 
+                    the program and we had a good time.
+                </p>
+            </div>
+            <div v-else>
+                <p>
+                    Siento como cada día estaba en españa había una aventura de algún tipo. El viaje a Logroño definitivamente era una aventura. 
+                    Me quedaba en un hostel en Madrid para dos noches antes de ir a Logroño, y allí conocí a un chico de Texas y una chica de Suecia,
+                    Juntos exploramos la ciudad. Vimos el Mueso del Prado, La Plaza Mayor, La Plaza del Sol, y El Parque de Retiro. Definitivamente fue una
+                    experiencia única pasar tiempo en una nueva ciudad, en un país diferente, y con desconocidos, pero me gustó mucho.
+                </p>
+                <p>
+                    Experimenté muchas aventuras con mi familia anfitriona también. Mi primer día en Logroño, fui con Sergio y sus amigos 
+                    a un evento donde algunas personas estaban derivando los coches alredador de una rotonda. Luego, comí la cena con Sergio y sus amigos. 
+                    El próxima dia fui con las padres anfitrionas y sus amigos a algunas cascadas y cuevas el el norte y son muy bellas. Una fin de la semana, 
+                    fuimos a un castillo en Olite, el Palacio de los Reyes de Navarra, y era un sitio muy interesante. Una otra fin de la semana, 
+                    fuimos a una playa que se llama Langre, y pasemos dos días en la playa, que era bella y estaba caliente. Y todos estos no incluyen las 
+                    aventuras cotidianas que experimenté viviendo y pasando tiempo con mi familia en Logroño.
+                </p>
+                <p>
+                    Finalmente, con mis compañeros de mis clases y de Utah State, fuimos en muchas aventuras también. Subimos al Monte Cantabria, viajamos a 
+                    Barcelona, juegemos al frisbee y fútbol en el parque, fuimos a compras, y cantamos Karaoke. Conocía a mis compañeros de clase muy bien 
+                    durante el programa y lo pasamos muy bien.
+                </p>
+            </div>
+        </main>
         <footer>
             <p v-if="lang == 'english'">This website was designed and written by Nicholas Rodgers using
                 <a href="https://vuejs.org/">Vue</a> and
