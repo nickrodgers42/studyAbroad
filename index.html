@@ -50,7 +50,6 @@
                 <el-menu-item index="food">Food</el-menu-item>
                 <el-menu-item index="adventure">Adventure</el-menu-item>
                 <el-menu-item index="video">Video</el-menu-item>
-                <el-menu-item index="more">More</el-menu-item>
             </template>
             <template v-else>
                 <el-menu-item index="index">Inicio</el-menu-item>
@@ -59,7 +58,6 @@
                 <el-menu-item index="food">La Comida</el-menu-item>
                 <el-menu-item index="adventure">La Aventura</el-menu-item>
                 <el-menu-item index="video">Mi Vídeo</el-menu-item>       
-                <el-menu-item index="more">Más</el-menu-item>
             </template>
         </el-menu>
         <el-row>
@@ -172,28 +170,13 @@
             </el-col>
         </el-row>
         <el-row>
-            <el-col :span="12">
+            <el-col :span="24">
                 <h1 v-if="lang == 'english'" v-on:click="goToPage('video')">Video</h1>
                 <h1 v-else v-on:click="goToPage('video')">Mi Vídeo</h1>
                 <div>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/3Ms0mXI4OOE" frameborder="0" allow="autoplay; encrypted-media"
                         allowfullscreen></iframe>
                 </div>
-            </el-col>
-            <el-col :span="12">
-                <h1 v-if="lang == 'english'" v-on:click="goToPage('more')">More</h1>
-                <h1 v-else v-on:click="goToPage('more')">Más</h1>
-                <el-carousel indicator-position="outside">
-                    <el-carousel-item>
-                        <img src="images/more/pradoJupiter.jpg">
-                    </el-carousel-item>
-                    <el-carousel-item>
-                        <img src="images/more/rieteraRoses.jpg">
-                    </el-carousel-item>
-                    <el-carousel-item>
-                        <img src="images/more/rodundaJesus.jpg">
-                    </el-carousel-item>
-                </el-carousel>
             </el-col>
             <!-- <el-col :span="24">
                 <h1 v-if="lang == 'english'" v-on:click="goToPage('video')">Video</h1>

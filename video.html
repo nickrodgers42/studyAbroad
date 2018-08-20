@@ -40,13 +40,36 @@
             </template>
             <template v-else>
                 <el-menu-item index="index">Inicio</el-menu-item>
-                <el-menu-item index="people">Personas</el-menu-item>
-                <el-menu-item index="places">Lugares</el-menu-item>
-                <el-menu-item index="food">Comida</el-menu-item>
-                <el-menu-item index="adventure">Aventura</el-menu-item>
-                <el-menu-item index="video">Vídeo</el-menu-item>
+                <el-menu-item index="people">Las Personas</el-menu-item>
+                <el-menu-item index="places">Los Lugares</el-menu-item>
+                <el-menu-item index="food">La Comida</el-menu-item>
+                <el-menu-item index="adventure">La Aventura</el-menu-item>
+                <el-menu-item index="video">Mi Vídeo</el-menu-item>
             </template>
         </el-menu>
+
+        <main>
+            <h1 v-if="lang == 'english'" v-on:click="goToPage('people')">Video</h1>
+            <h1 v-else v-on:click="goToPage('people')">Mi Vídeo</h1>
+            <div>
+                <iframe style="margin:auto; display: block;" width="640" height="380" src="https://www.youtube.com/embed/3Ms0mXI4OOE" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+            </div>
+            
+            <div v-if="lang == 'english'">
+               <p>
+                   During the adventures on my trip, I took my GoPro and recorded videos of my experiences. I have a lot more than what is on the above video, but 
+                   I feel like this video shows a bit of all of the most important and memorable experiences. 
+               </p>
+            </div>
+            <div v-else>
+                <p>
+                    Durante las aventuras en mi viaje, tomé mi GoPro y recordé vídeos de mis experiencias. Tengo mucho más que lo está en el vídeo de arriba, pero
+                    siento que este vídeo muestra un poco de todos los experiencias más importantes y memorables. 
+                </p>
+            </div>
+
+        </main>
         
         <footer>
             <p v-if="lang == 'english'">This website was designed and written by Nicholas Rodgers using
@@ -69,7 +92,7 @@
     var vm = new Vue({
         el: "#page",
         data: {
-            activeIndex: 'index',
+            activeIndex: 'video',
             lang: "english"
         },
         methods: {
