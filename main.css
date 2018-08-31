@@ -51,6 +51,10 @@ p {
     color: #f9f2db;
 }
 
+#homeBtn:hover {
+    cursor: pointer;
+}
+
 .lang {
     float: right;
 }
